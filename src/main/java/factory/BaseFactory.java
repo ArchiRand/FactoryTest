@@ -24,6 +24,10 @@ public abstract class BaseFactory<E extends BaseEntity, F extends BaseFactory> {
         return factory;
     }
 
+    public F oneToOneByCode(int code) {
+        return factory;
+    }
+
     public E get() {
         return entity;
     }

@@ -27,8 +27,4 @@ public class LawProceedingExpertiseFactory extends BaseFactory<LawProceedingExpe
         return this;
     }
 
-    @Override
-    public LawProceedingExpertise get() {
-        return entity;
-    }
 }

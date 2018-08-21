@@ -2,10 +2,21 @@ package entity;
 
 import interfaces.BaseEntity;
 
+import java.util.Date;
+
 public class LawProceeding extends BaseEntity {
     private LawClaim lawClaim;
     private KlUni proceedind;
+    private Date dateDoc;
     private LawProceedingExpertise lawProcExpert;
+
+    public Date getDateDoc() {
+        return dateDoc;
+    }
+
+    public void setDateDoc(Date dateDoc) {
+        this.dateDoc = dateDoc;
+    }
 
     public LawProceedingExpertise getLawProcExpert() {
         return lawProcExpert;
@@ -19,7 +30,7 @@ public class LawProceeding extends BaseEntity {
         return proceedind;
     }
 
-    public void setProceedind(KlUni proceedind) {
+    public void setProceeding(KlUni proceedind) {
         this.proceedind = proceedind;
     }
 

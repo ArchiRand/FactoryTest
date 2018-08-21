@@ -19,7 +19,7 @@ public class EntityFactory {
             if (((ParameterizedType) x.getGenericSuperclass()).getActualTypeArguments()[0].equals(clazz)) {
                 try {
                     BaseFactory factory = (BaseFactory) x.newInstance();
-//                    factory.setEntityFactory(this);
+                    factory.setEntityFactory(this);
                     return factories.putIfAbsent(clazz, factory);
                 } catch (InstantiationException | IllegalAccessException e) {
                     e.printStackTrace();

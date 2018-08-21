@@ -43,11 +43,8 @@ public class Main {
 //        System.out.println(extraClaim);
 //        System.out.println("<=================================================>\n");
 
-        LawProceedingExpertise lpe = (LawProceedingExpertise) entityFactory
-                .create(LawProceedingExpertise.class)
-                .bindWith(entityFactory.create(LawProceeding.class).bindWith(claim).get())
-                .get();
-        System.out.println(lpe);
+        LawProceeding expertise = (LawProceeding) entityFactory.create(LawProceeding.class).bindWith(claim).oneToOneByCode(731).get();
+        System.out.println(expertise);
         System.out.println("<=================================================>\n");
     }
 }
